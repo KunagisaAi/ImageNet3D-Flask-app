@@ -1,17 +1,4 @@
 # 🖼️ImageNet3D Flask app
-# I. Project Background and Significance
-In the field of computer vision, 3D understanding has always been a popular and challenging research direction. In recent years, with the rapid development of deep learning, synthetic images generated based on diffusion models come with pseudo 3D annotations. At first glance, it seems that a new "oil field" of data has been found for 3D research, which can help us more conveniently study the appearance of objects in three-dimensional space.<br>
-
-The ImageNet3D Flask project emerges precisely based on the above-mentioned requirements. Its aim is to construct a high-quality 3D annotation dataset. This dataset is mainly used to evaluate the practical performance of 3D understanding models constructed based on large language models (LLMs) and generative diffusion models in scenarios with zero-shot or few-shot data, including core functions such as object localization, detection, and segmentation.<br>
-
-For example, in the task of object localization, through the testing of this dataset, it is possible to examine the accuracy of the model in judging the position of objects in three-dimensional space when there is a lack of a large amount of annotated data. In the task of object detection, it is possible to assess the recognition efficiency and precision of the model for different objects in the scene.<br>
-
-Many cutting-edge fields nowadays are inseparable from 3D vision technology. For instance, in autonomous driving, vehicles need to use 3D understanding technology to quickly identify pedestrians, vehicles, and obstacles on the road. <br>
-In virtual reality, to provide users with an immersive experience, the 3D presentation of scenes and objects must be realistic enough. Similarly,<br>
-in robot perception, accurate 3D data can help robots better understand their surrounding environment and complete complex operations.<br>
-
-By accurately annotating attributes such as the position, rotation angle, and size of objects in 3D space, it is possible to provide high-quality data support for related research. <br>
-<!--guowuquan-->
 ## 📖Notes on Using the Software and Solutions to Common Problems
 ### 📦Packages to install before running the program:
 
@@ -30,9 +17,21 @@ When in use, a folder named "imagene3dstorage" will be created in the current di
 In the next-level directory of this folder, there will be an empty SQLite file with 0 bytes. <br>
 You can replace its content with that of the "daatabasse_default.ssqlite" file in the software's root directory to use it normally. <br>
 The software 'Navicat Premium' can be used for replacement. <br>
+
+```
+pip install Flask numpy matplotlib pillow opencv-python-headless flask-login
+```
+Or enter in the root directory of the file
+
+```
+pip install requirements.txt
+```
+<!--guowuquan-->
+
 The file distribution is as follows:
 ## Repository Structure
-'''
+
+```
 📁 ImageNet3D-Flask-app/
 ├── 📁 static/
 │   ├── 📁 images/
@@ -54,7 +53,8 @@ The file distribution is as follows:
 ├── README.zh.md
 ├── requirements.txt
 └── 📁 logs/
-'''
+```
+
 <br>
 <!-- by zhouxinian 2206302240333  The file distribution is as follows-->
 
@@ -120,8 +120,7 @@ After labeling all information, clicking the green save button or pushing "Enter
 
 ![image](static/images/ui_save.png)
 
-# ImageNet3D Flask app
-## Guidelines
+## 🧭Guidelines
 ***Matching mesh model (with initializations provided by a pretrained model).***
 The best matching model from a list of mesh models given. This is crucial to make accurate estimations of the following parameters so this should be the first thing to do. Click on "<- Model" and "Model ->" buttons to change the mesh model selection.
 
